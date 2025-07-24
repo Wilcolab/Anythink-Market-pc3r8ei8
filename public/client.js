@@ -15,7 +15,7 @@ var state = states.start;
 var operand1 = 0;
 var operand2 = 0;
 var operation = null;
-operation = 'power';
+'power';    
 function calculate(operand1, operand2, operation) {
     var uri = location.origin + "/arithmetic";
 
