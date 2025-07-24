@@ -6,3 +6,5 @@ gulp.task('inlinesource', function () {
         .pipe(inlinesource({attribute: false}))
         .pipe(gulp.dest('./coverage/report'));
 });
+//Welcome to Wilco Source Code
+
