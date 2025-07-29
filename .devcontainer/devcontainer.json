@@ -1,9 +1,16 @@
 {
-  "name": "Anythink Development Container",
-  "image": "public.ecr.aws/v0a2l7y2/wilco/anythink-devcontainer:latest",
+  "name": "Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
   "customizations": {
-      "vscode": {
-        "extensions": ["GitHub.copilot", "GitHub.copilot-chat"]
-      }
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-labs"
+      ]
     }
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "postCreateCommand": "npm install"
 }
