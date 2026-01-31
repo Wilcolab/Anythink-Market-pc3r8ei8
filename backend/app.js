@@ -42,15 +42,7 @@ if (!process.env.MONGODB_URI) {
   console.warn("Missing MONGODB_URI in env, please add it to your .env file");
 }
 
-// Construct MongoDB URI with password if provided
-let mongoUri = process.env.MONGODB_URI;
-if (process.env.MONGO_PASSWORD) {
-  const uri = new URL(mongoUri);
-  uri.password = process.env.MONGO_PASSWORD;
-  mongoUri = uri.toString();
-}
-
-mongoose.connect(mongoUri);
+mongoose.connect(process.env.MONGODB_URI);
 if (isProduction) {
 } else {
   mongoose.set("debug", true);
